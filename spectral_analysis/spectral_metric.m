@@ -1,0 +1,1 @@
+function spectral_metric(spectra)
