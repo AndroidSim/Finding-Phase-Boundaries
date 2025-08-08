@@ -2,7 +2,7 @@
 
 The overall goal of this project is to find the phase boundaries of coexistence regions within phase diagrams using experimental data. For this specific project currently presented, the goal of was to find the phase boundary compositions for a two-phase coexistence region within the phase diagram of lipid bilayers that vary in composition using experimentally obtained ESR spectra.
 
-## Thermodyanmic background
+## Thermodynamic background
 
 If a multi-component chemical composition is unstable, it can achieve stablility by separating into 2 or more phases with different compositions. Gibbs' phase rule, F = C - P + N, gives the number of intensive thermodynamic variables (i.e. size-invariant) that need to be independently fixed (i.e. thermodynamic degrees of freedom) to uniquely specify the equilibrium state of an open system if the number of chemical components and phases are known, where where P is the number of phases, F is the number of degrees of freedom, C is the number of chemical components, and N is the number of non-compositional variables (like temperature and pressure). In this project, P = 2, C = 2, and N = 0 (because temperature and pressure are constant), which give F = 0. Topologically, the degrees of freedom specify the geometric representation or dimension of the thermodynamic system in the space of the intensive variables.  For example, f = 0 (invariant) is a point, f = 1 (univariant) is a line or curve, and f = 2 (divariant) is a field, plane, or surface. Another intensive variable used is mole fraction, which is the ratio of the amount of a single chemical component over the total amount of all chemical components. A constraint to the system is that the mole fractions sum to unity. In this project, a two-component system is a line of compositions containing a two-phase coexistence region, within which the equilibrium state of the system is uniquely specified as two separated phases each with a different composition. The compositions of each phase are called boundary compositions because they are fixed at each end of the line segment specifying the two-phase region. However, although the boundary compositions do not change within the two-phase region as the total composition changes, the fraction of each phase does change, and these fractions sum to unity.
 
@@ -16,12 +16,13 @@ Assuming the linear superposition model applies, the method to determine phase b
 
 Before analysis, the derivative ESR spectra were integrated into absorbance spectra and then normalized to unit area.   Each absorbance spectrum is converted into an absorbance data vector, which is a discretization of the absorbance intensity versus magnetic field.  The ESR data vectors from sample compositions along the binary axis were organized into a spectral data matrix, S, with the number of rows (M) equal to the number of discrete magnetic field values and the number of columns (N) equal to the number of compositional points sorted by mole fraction from 0 to 1.  This data matrix has the following structure,
 
- <img width="1024" height="207" alt="image" src="https://github.com/user-attachments/assets/10cb6433-57a0-4db9-b56b-57c5107df103" /> (Eqn. 2.1)
+ <img width="200" height="40" alt="image" src="https://github.com/user-attachments/assets/10cb6433-57a0-4db9-b56b-57c5107df103" /> (Eqn. 2.1)			
  
 where Sα is the matrix of spectral data within the one-phase region of the alpha phase, Sβ is the matrix of spectral data within the one-phase region of the beta phase, and Sγ is the matrix of spectral data within the alpha + beta coexistence region.  A priori the phase boundary spectra that partition the data matrix into these three regions are unknown; however, ordering the columns of the data matrix by increasing mole fraction and knowing that a two-phase region is flanked by one-phase regions determines the matrix structure.  In addition, the constraints imposed on the S matrix were non-negativity (i.e. positive definite) and closure (i.e. normalization),
 
-<img width="1024" height="115" alt="image" src="https://github.com/user-attachments/assets/eb945190-8d8a-4876-8c15-c25bca6f2c99" />
-<img width="1024" height="441" alt="image" src="https://github.com/user-attachments/assets/832ddffb-ebbd-41eb-927d-eb7b16f6729a" /> (Eqns. 2.2)
+<img width="400" height="40" alt="image" src="https://github.com/user-attachments/assets/eb945190-8d8a-4876-8c15-c25bca6f2c99" />
+
+<img width="200" height="100" alt="image" src="https://github.com/user-attachments/assets/832ddffb-ebbd-41eb-927d-eb7b16f6729a" /> (Eqns. 2.2)
 
 The non-negativity constraint reflects the fact that absorbance intensities are defined as non-negative scalars; therefore, negative intensities that occur within the noise of the baseline are set to zero.  The closure constraint is just the discrete version of the integral normalization of the absorbance spectra to unit area rescaled by a constant magnetic field interval,  
 
