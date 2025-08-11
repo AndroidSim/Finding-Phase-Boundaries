@@ -1,6 +1,6 @@
-# Searching for the phase boundaries of phase diagrams
+# Finding the phase boundaries of phase diagrams
 
-The overall goal of this project is to find the phase boundaries of coexistence regions within phase diagrams using experimental data. For this specific project currently presented, the goal of was to find the phase boundary compositions for a two-phase coexistence region within the phase diagram of lipid bilayers that vary in composition using experimentally obtained ESR spectra.
+The overall goal of this project is to find the phase boundaries of coexistence regions within phase diagrams using experimental data. For this specific project presented, the goal of was to find the phase boundary compositions for a two-phase coexistence region varying in composition within the phase diagram of lipid bilayers using experimentally obtained ESR spectra.
 
 ## Thermodynamic background
 
@@ -8,7 +8,7 @@ If a multi-component chemical composition is unstable, it can achieve stablility
 
 ## Analysis of experimentally obtained ESR spectra
 
-An electron spin resonance (ESR) spectrum is the absorbance of microwave radiation when varing a magnetic field by a free electron spin (i.e. free radical), which is usually attached to a molecule called a spin-probe. An ESR spectrum is independent of phase domain size and is sensitive to phase transitions from one phase to another.  However, a spectrum cannot distinguish individual phases present in coexisting phases without sophisticated spectral analysis. Therefore, the linear superposition model for physical properties of multi-phase systems was applied to analyze the ESR spectra. In general, the linear superposition model of any measurement within a two-phase coexistence region is the weighted sum of the measurements from the two phase boundary compositions, where the weights are 1) the fractions of the measurement from each phase and 2) sum to unity. For application to ESR spectra, this model assumes that the spin-probe partitions between the distinct (possibly submicroscopic or nanoscopic) coexisting phases, and only an insignificant fraction of the probe is at the interface between the phases.  Therefore, because the probe is reporting on the internal physical properties of a phase, the spectrum from a multi-phase system is the linear combination of the spectra from each coexisting phase weighted by the fraction of total spin-probe in that phase.  The process of locating phase boundaries essentially involves finding the optimal basis set of this linear combination with appropriate constraints (such as normalization and non-negativity of the experimental spectra in the absorption mode).  Then, with the proper basis set, the compositions of the coexisting phases can be located; however, so far, this approach can only be applied to binary systems with variable temperature, where the directions (i.e. slopes) of the required thermodynamic tie-lines are known.  Furthermore, the best results are obtained when the spectra from the coexisting phases are significantly different from each other and the spin-probe’s partition coefficient is not much different from unity. 
+An electron spin resonance (ESR) spectrum is the absorbance of microwave radiation when varing a magnetic field by a free electron spin (i.e. free radical), which is usually attached to a molecule called a spin-probe. An ESR spectrum is independent of phase domain size and is sensitive to phase transitions from one phase to another.  However, a spectrum cannot distinguish individual phases present in coexisting phases without sophisticated spectral analysis. Therefore, the linear superposition model for physical properties of multi-phase systems was applied to analyze the ESR spectra. In general, the linear superposition model of any measurement within a two-phase coexistence region is the weighted sum of the measurements from the two phase boundary compositions, where the weights are 1) the fractions of the measurement from each phase and 2) sum to unity. For application to ESR spectra, this model assumes that the spin-probe partitions between the distinct (possibly submicroscopic or nanoscopic) coexisting phases, and only an insignificant fraction of the probe is at the interface between the phases.  Therefore, because the probe is reporting on the internal physical properties of a phase, the spectrum from a multi-phase system is the linear combination of the spectra from each coexisting phase weighted by the fraction of total spin-probe in that phase.  The process of locating phase boundaries essentially involves finding the optimal basis set of this linear combination with appropriate constraints (such as normalization and non-negativity of the experimental spectra in the absorption mode).  Then, with the proper basis set, the compositions of the coexisting phases can be located; however, so far, this approach can only be applied to binary systems with constant or variable temperature, where the directions (i.e. slopes) of the required thermodynamic tie-lines are known.  Furthermore, the best results are obtained when the spectra from the coexisting phases are significantly different from each other and the spin-probe’s partition coefficient is not much different from unity. 
 
 ## Determination of Phase Boundaries in Binary Systems by ESR
 
@@ -26,49 +26,49 @@ where Sα is the matrix of spectral data within the one-phase region of the alph
 
 The non-negativity constraint reflects the fact that absorbance intensities are defined as non-negative scalars; therefore, negative intensities that occur within the noise of the baseline are set to zero.  The closure constraint is just the discrete version of the integral normalization of the absorbance spectra to unit area rescaled by a constant magnetic field interval,  
 
-<img width="1024" height="213" alt="image" src="https://github.com/user-attachments/assets/c5205fd0-d47b-41fa-8199-fff29576f6cf" />
+<img width="500" height="100" alt="image" src="https://github.com/user-attachments/assets/c5205fd0-d47b-41fa-8199-fff29576f6cf" />
 
 Under the linear superposition model, the coexistence spectra, Sγ, are a convex linear combination of the phase boundary spectra,
 
-<img width="915" height="547" alt="image" src="https://github.com/user-attachments/assets/fb645e98-fc24-4f72-8ec4-4beb3917a862" /> (Eqn. 2.3)
+<img width="300" height="150" alt="image" src="https://github.com/user-attachments/assets/fb645e98-fc24-4f72-8ec4-4beb3917a862" /> (Eqn. 2.3)
 
 with constraints on the coefficients,
 
-<img width="713" height="702" alt="image" src="https://github.com/user-attachments/assets/a64cc91a-a3b4-4664-8079-cc4e4e45bee8" /> (Eqn. 2.4)
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/a64cc91a-a3b4-4664-8079-cc4e4e45bee8" /> (Eqn. 2.4)
 						          			   
 where fα is the fraction of total spin-probe in the alpha phase, fβ is the fraction of total spin-probe in the beta phase, Sα is the alpha phase boundary spectrum, and Sβ is the beta phase boundary spectrum.  With the definitions,
 
-<img width="945" height="529" alt="image" src="https://github.com/user-attachments/assets/d5d8bc16-940b-45aa-8253-dd8d857368fd" /> (Eqn. 2.5)
+<img width="300" height="150" alt="image" src="https://github.com/user-attachments/assets/d5d8bc16-940b-45aa-8253-dd8d857368fd" /> (Eqn. 2.5)
 					                        
 the coexistence spectra can be written in matrix form,
 
-<img width="1024" height="315" alt="image" src="https://github.com/user-attachments/assets/1d9ad863-4e9c-4866-aab5-1908ce3cf329" /> (Eqn. 2.6)
+<img width="200" height="60" alt="image" src="https://github.com/user-attachments/assets/1d9ad863-4e9c-4866-aab5-1908ce3cf329" /> (Eqn. 2.6)
 								
 where B is a M x 2 matrix and f is an 2 x C matrix (C is the number of coexistence spectra).  An approximation to the S data matrix, S*, which includes the full compositional range (i.e. includes the alpha and beta one-phase regions) can be written,
 
-, <img width="1024" height="298" alt="image" src="https://github.com/user-attachments/assets/24a7a730-6d2b-49f7-aca3-3d5b99adf967" />
+<img width="200" height="60" alt="image" src="https://github.com/user-attachments/assets/24a7a730-6d2b-49f7-aca3-3d5b99adf967" />
 
 where the f* matrix (2 x N)  is the f matrix extended by N−X rows of [1 0] for the alpha phase or [0 1] for the beta phase,
 
-<img width="680" height="735" alt="image" src="https://github.com/user-attachments/assets/a25b720c-2169-47b0-a2cc-96c58a6d8063" /> (Eqn. 2.7)
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/a25b720c-2169-47b0-a2cc-96c58a6d8063" /> (Eqn. 2.7)
 
 The assumption in this approximation is that the one-phase spectra are the same as their respective phase boundary spectra.  Because spectral intensities vary with composition in a one-phase region, the validity of this assumption is obviously questionable; however, the linear superposition model only applies to the data near and within the coexistence region, so a method to determine phase boundaries using data from the entire compositional range must systematically and rationally address the flanking one-phase regions.  Furthermore, there is no requirement that the data must explicitly contain the phase boundary spectra or be very near the phase boundary spectra, but there is a requirement that the data overlap both the one-phase regions and the coexistence region.       
 
 Therefore, within the previous formulation where S is known and B, f* are unknown, we seek the solution to the following minimization problem,
 
-<img width="1024" height="202" alt="image" src="https://github.com/user-attachments/assets/cfbcd23b-b902-4ac9-99fc-cdec4a0a6ef3" /> (Eqn. 2.8)		
+<img width="400" height="80" alt="image" src="https://github.com/user-attachments/assets/cfbcd23b-b902-4ac9-99fc-cdec4a0a6ef3" /> (Eqn. 2.8)		
 
 When B and f* are unconstrained, the formal solution to this problem (in the literature called “total least squares”, TLS) is rank reduction through the singular value decomposition (SVD) of the S data matrix.  The rank of the S* matrix is two.  From the SVD of S,
 
-<img width="1024" height="196" alt="image" src="https://github.com/user-attachments/assets/825f7407-b057-4f2e-8c91-c7ea100998aa" /> (Eqn. 2.9)
+<img width="300" height="60" alt="image" src="https://github.com/user-attachments/assets/825f7407-b057-4f2e-8c91-c7ea100998aa" /> (Eqn. 2.9)
 
 the columns of the U matrix (M x N) are the orthonormal basis vectors (eigenspectra) for the space of data vectors, the W matrix (N x N) is the diagonal matrix of singular values ordered from highest to lowest, and the rows of the V matrix (N x N) are the orthonormal basis vectors of the dual space to the space of data vectors.  The rank two reduction of the S matrix to the solution S* involves keeping the two highest singular values and setting the rest to zero,
 
-<img width="979" height="511" alt="image" src="https://github.com/user-attachments/assets/e5541c83-a910-4b8d-b8a9-d737648539c8" /> (Eqn. 2.10)
+<img width="300" height="150" alt="image" src="https://github.com/user-attachments/assets/e5541c83-a910-4b8d-b8a9-d737648539c8" /> (Eqn. 2.10)
 
 where W2 is the modified singular value matrix W and therefore D2 is a N x N matrix that can be truncated to a 2 x N matrix by removing the N−2 rows of zeros.  To conform to the non-negativity and closure constraints (Eqn. 2.2) on the data vectors, the following N number of standard linear least squares problems are solved,
 
-<img width="1024" height="240" alt="image" src="https://github.com/user-attachments/assets/a135ddf9-cb5d-4bfa-b4c2-ebd2b4c7b4ad" /> (Eqn. 2.11)
+<img width="400" height="80" alt="image" src="https://github.com/user-attachments/assets/a135ddf9-cb5d-4bfa-b4c2-ebd2b4c7b4ad" /> (Eqn. 2.11)
 
 with constraints,
 
@@ -81,6 +81,13 @@ The two main obstacles to the future development of this method are the systemat
 Regarding the extension of the method to phase diagrams of three or more components, its most applicable use would be determining the vertices (i.e. invariant or triple points) of the three-phase triangle.  In this case, the solution would involve the rank three reduction of the data matrix through its SVD.  However, formation of the appropriate data matrix (as in Eqn. 2.1) is nontrivial for a two-dimensional composition space where a compositional point is represented by a vector of mole fractions instead of a scalar mole fraction as for the one-dimensional composition space in a binary system.  In addition, three-phase triangles are not only flanked by three one-phase regions that need to be modeled, but also by three two-phase regions.
 
 ## Workflow 
+The following workflow assumes that the data matrix S above has been formed from the experimentally obtain ESR spectra. This involves concatenating individual spectra into a matrix, aligning by magnetic field, turning negative values on the baseline to positive (i.e. using absolute value), and then normalization. 
+
 ### Load ESR spectra into memory
+
+load()
+
 ### Run script
+
+phase_boundary_fit()
 
