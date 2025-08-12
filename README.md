@@ -81,11 +81,14 @@ The two main obstacles to the future development of this method are the systemat
 Regarding the extension of the method to phase diagrams of three or more components, its most applicable use would be determining the vertices (i.e. invariant or triple points) of the three-phase triangle.  In this case, the solution would involve the rank three reduction of the data matrix through its SVD.  However, formation of the appropriate data matrix (as in Eqn. 2.1) is nontrivial for a two-dimensional composition space where a compositional point is represented by a vector of mole fractions instead of a scalar mole fraction as for the one-dimensional composition space in a binary system.  In addition, three-phase triangles are not only flanked by three one-phase regions that need to be modeled, but also by three two-phase regions.
 
 ## Workflow 
-The following workflow assumes that the data matrix S above in Eqn 2.1 has been formed from the experimentally obtain ESR spectra. This involves concatenating individual spectra into a matrix, aligning by magnetic field, turning negative values on the baseline to zero, and then normalization. 
 
-### Load ESR spectra into memory
+This project was originally developed in Matlab. However, the following workflow was executed in GNU Octave, which is similar to Matlab.
 
-load()
+### Load ESR spectra into workspace
+
+### Form data matrix S (Eqn 2.1 above) from the experimentally obtain ESR spectra
+
+This involves concatenating individual spectra into a matrix, aligning by magnetic field, turning negative values on the baseline to zero, and then normalization. 
 
 ### Run script
 
